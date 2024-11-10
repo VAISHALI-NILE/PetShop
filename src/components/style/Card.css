@@ -1,0 +1,23 @@
+.card {
+  height: 25rem;
+  width: 20rem;
+  color: #492710;
+}
+.card .price {
+  color: green;
+}
+.card .dis {
+  color: black;
+}
+.image-card {
+  height: 80%;
+  width: auto;
+}
+.card-btn {
+  margin-top: 1rem;
+  width: 5rem;
+  height: 3rem;
+  cursor: pointer;
+  border: 1px solid #492710;
+  background-color: transparent;
+}
