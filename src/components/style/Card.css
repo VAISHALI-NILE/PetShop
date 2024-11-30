@@ -15,6 +15,7 @@
 }
 .card-btn {
   margin-top: 1rem;
+  justify-self: baseline;
   width: 5rem;
   height: 3rem;
   cursor: pointer;

@@ -1,0 +1,133 @@
+/* General Layout */
+.details-container {
+  display: flex;
+  padding: 3rem;
+  gap: 2rem;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.details-container img {
+  width: 40vw;
+  height: 80vh;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Styling */
+.details form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.details h1 {
+  font-size: 2rem;
+  color: #b48362;
+}
+
+.details h2 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.details p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.details-container select {
+  width: 100%;
+  height: 2.3rem;
+  margin: 0.5rem 0;
+  border: 1px solid #b48362;
+  border-radius: 5px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  color: #333;
+  background-color: #fff;
+}
+
+/* Button Styling */
+.buy {
+  background-color: #b48362;
+  margin: 1rem;
+  border: none;
+  padding: 1rem;
+  color: white;
+  width: 40%;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.add {
+  background-color: transparent;
+  border: solid 1px #b48362;
+  padding: 1rem;
+  color: #b48362;
+  width: 40%;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Radio Button Boxes */
+.radio-boxes {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.box {
+  width: 80px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  transition: 0.3s;
+  user-select: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.box:hover {
+  border-color: #b48362;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.box.selected {
+  background-color: #b48362;
+  color: #fff;
+  border-color: #b48362;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .details-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .details-container img {
+    width: 100%;
+    height: auto;
+  }
+
+  .details {
+    width: 100%;
+    padding: 1rem;
+  }
+}
+.similar-products {
+  display: flex;
+  gap: 3rem;
+  padding: 3rem;
+  justify-content: center;
+}

@@ -11,7 +11,7 @@
   align-items: center;
   padding: 0rem 2rem 0rem 2rem;
 }
-.nav-bar div > * {
+.nav-bar a {
   text-decoration: none;
   color: white;
 }
@@ -21,4 +21,21 @@
 }
 .right-nav {
   background-color: #492710;
+}
+.search {
+  background-color: transparent;
+  width: 60vw;
+  height: 100%;
+  color: #492710;
+  font-size: large;
+  border: none;
+}
+input:focus {
+  border: none;
+  outline: none;
+}
+.search-icon {
+  font-size: 18px;
+  color: #492710;
+  cursor: pointer;
 }

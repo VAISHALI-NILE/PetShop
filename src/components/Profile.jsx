@@ -1,11 +1,17 @@
 import React from "react";
 import NavBar from "./NavBar";
+import Footer from "./Footer";
 
 const Profile = () => {
   return (
     <>
       <NavBar />
-      <h1>Profile</h1>
+      <div>
+        <div>Hello , User</div>
+        <div className="profile-list"></div>
+        <div></div>
+      </div>
+      <Footer />
     </>
   );
 };

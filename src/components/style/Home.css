@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 .home-top {
   background-color: #fff8f2;
   height: 95vh;
@@ -85,6 +88,7 @@ hr {
 /* about */
 
 .about {
+  background-color: #fff8f2;
   margin-top: 3rem;
   color: #492710;
   padding: 3rem 19rem;

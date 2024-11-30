@@ -1,0 +1,50 @@
+.checkout-page {
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+.checkout-page input {
+  padding: 1rem;
+  width: 20rem;
+  margin: 1rem;
+}
+.checkout-page select {
+  padding: 1rem;
+  width: 22rem;
+  margin: 1rem;
+}
+.checkout-page div {
+  padding: 2rem;
+}
+.cart-summary img {
+  width: 20%;
+}
+.checkout-form {
+  width: 60%;
+}
+.cart-summary {
+  background-color: #e4d5b8;
+}
+.cart-summary .cart {
+  display: flex;
+}
+.cart-summary button {
+  align-self: flex-start;
+  background-color: transparent;
+}
+.checkout-page li {
+  list-style: none;
+}
+
+.place-order {
+  background-color: #e4d5b8;
+  width: 100%;
+  padding: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.place-order:hover {
+  background-color: #492710;
+  color: white;
+}

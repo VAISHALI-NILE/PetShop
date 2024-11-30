@@ -1,0 +1,12 @@
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7rem;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.products-container {
+  padding: 3rem;
+  margin: 2rem;
+}
