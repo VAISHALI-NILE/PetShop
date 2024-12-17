@@ -124,6 +124,9 @@
     width: 100%;
     padding: 1rem;
   }
+  .similar-products {
+    flex-wrap: wrap;
+  }
 }
 .similar-products {
   display: flex;

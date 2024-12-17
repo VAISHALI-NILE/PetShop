@@ -1,0 +1,65 @@
+.profile-page {
+  max-width: 80vw;
+  margin: auto;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin-bottom: 15px;
+  color: #492710;
+}
+
+.user-info,
+.order-history,
+.account-settings {
+  margin-bottom: 30px;
+  padding: 20px;
+}
+
+.info-item {
+  margin: 10px 0;
+}
+
+.edit-btn,
+.settings-btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #492710;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-btn:hover,
+.settings-btn:hover {
+  background-color: #492710;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table th {
+  background-color: #e4d5b8;
+}
+
+.settings-btn {
+  display: block;
+  margin: 10px 0;
+  width: 100%;
+  text-align: center;
+}

@@ -53,3 +53,11 @@
 .logo-socials ul {
   display: flex;
 }
+@media (max-width: 500px) {
+  .sub-footer {
+    flex-wrap: wrap;
+  }
+  .extra-links {
+    display: none;
+  }
+}

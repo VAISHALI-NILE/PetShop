@@ -22,3 +22,8 @@
   border: 1px solid #492710;
   background-color: transparent;
 }
+@media (max-width: 450px) {
+  .card {
+    height: fit-content;
+  }
+}

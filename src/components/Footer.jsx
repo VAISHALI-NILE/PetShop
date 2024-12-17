@@ -34,7 +34,7 @@ const Footer = () => {
           </ul>
         </div>
         <div>
-          <ul>
+          <ul className="extra-links">
             <li>Rope Leads</li>
             <li>Rope Collar</li>
             <li>Collar Tags</li>

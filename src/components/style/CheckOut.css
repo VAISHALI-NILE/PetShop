@@ -48,3 +48,17 @@
   background-color: #492710;
   color: white;
 }
+
+.update-btn {
+  background-color: #492710;
+  width: 40%;
+  border: none;
+  padding: 1rem;
+  color: white;
+  cursor: pointer;
+}
+.user-data {
+  border: 2px solid #492710;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+}

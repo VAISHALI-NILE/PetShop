@@ -81,8 +81,7 @@ const Home = () => {
       <div className="home-top">
         <div className="center-text">
           <div className="headline">
-            Buy Something Pawsome{" "}
-            <img style={{ height: "6rem" }} src={paw} alt="" />
+            Buy Something Pawsome <img className="paw-img" src={paw} alt="" />
           </div>
           <img className="home-top-img" src={bgImg} alt="" />
         </div>
@@ -133,8 +132,8 @@ const Home = () => {
           <img style={{ height: "2rem" }} src={paw} alt="" />
         </p>
         <div className="about-img">
-          <img style={{ height: "15rem" }} src={aboutimg1} alt="" />
-          <img style={{ height: "20rem" }} src={aboutimg2} alt="" />
+          <img className="aboutimg1" src={aboutimg1} alt="" />
+          <img className="aboutimg2" src={aboutimg2} alt="" />
         </div>
       </div>
 

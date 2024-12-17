@@ -3,8 +3,10 @@ import NavBar from "./NavBar";
 import Footer from "./Footer";
 import img from "../Images/Products/product1.png";
 import "./style/ProductDetails.css";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { Card } from "./Card";
+import { networkRequest } from "../utils/networkRequest";
+import { apiAuth } from "../utils/url";
 
 function ProductDetails() {
   const petProducts = [
@@ -40,22 +42,64 @@ function ProductDetails() {
     },
   ];
   const [selectedSize, setSelectedSize] = useState("");
+  const [quantity, setQuantity] = useState(1);
+
   const location = useLocation();
   const product = location.state;
-
+  const navigate = useNavigate();
   const handleSelection = (size) => {
     setSelectedSize(size);
   };
 
-  const handleAddCart = (event) => {
+  const handleAddCart = async (event) => {
     event.preventDefault();
+    console.log("Product", product);
+
     if (!selectedSize) {
       alert("Please select a size.");
       return;
     }
-    const quantity = document.getElementById("quantity").value;
-    console.log({ product, size: selectedSize, quantity });
-    alert("Product added to cart successfully!");
+
+    const quantity = parseInt(document.getElementById("quantity").value, 10);
+    const userId = localStorage.getItem("userId");
+    const productId = product._id;
+    const size = selectedSize;
+
+    const payload = { userId, productId, quantity, size };
+    console.log("Request Data:", payload);
+    Object.setPrototypeOf(payload, FormData);
+    try {
+      // Send data as JSON
+      await networkRequest(
+        apiAuth.addToCart,
+        (res) => {
+          alert(res.message || "Added to cart successfully!");
+        },
+        "post",
+        payload // JSON payload
+      );
+    } catch (err) {
+      console.error("Error adding product to cart:", err);
+      alert("Failed to add product to cart.");
+    }
+  };
+
+  const handleBuyNow = () => {
+    if (!selectedSize) {
+      alert("Please select a size.");
+      return;
+    }
+
+    // Use the quantity and selected size from state
+    const newProduct = {
+      ...product,
+      productId: product._id, // Assuming product contains all other details
+      quantity: quantity,
+      size: selectedSize,
+    };
+
+    // Pass the product to the checkout page
+    navigate("/checkout", { state: { product: newProduct } });
   };
 
   return (
@@ -68,7 +112,7 @@ function ProductDetails() {
             <img src={product.image || img} alt="Product" />
           </div>
           <div className="details">
-            <form onSubmit={handleAddCart}>
+            <form>
               <h1>{product.name}</h1>
               <h2>{product.price}</h2>
               <p>{product.description}</p>
@@ -87,7 +131,7 @@ function ProductDetails() {
               </div>
               <div>
                 <label htmlFor="quantity">Quantity:</label>
-                <select name="quantity" id="quantity">
+                <select name="quantity" id="quantity" value={quantity}>
                   {[1, 2, 3].map((num) => (
                     <option key={num} value={num}>
                       {num}
@@ -99,7 +143,7 @@ function ProductDetails() {
                 <button type="submit" className="add" onClick={handleAddCart}>
                   Add To Cart
                 </button>
-                <button type="submit" className="buy">
+                <button type="submit" className="buy" onClick={handleBuyNow}>
                   Buy Now
                 </button>
               </div>
@@ -109,7 +153,7 @@ function ProductDetails() {
       </div>
 
       <hr />
-      <div style={{ padding: "3rem" }}>
+      <div className="similar-products">
         <h2>Similar Products</h2>
         <div className="similar-products">
           {petProducts.map((product) => {

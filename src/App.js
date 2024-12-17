@@ -7,6 +7,8 @@ import Profile from "./components/Profile";
 import "./App.css";
 import ProductDetails from "./components/ProductDetails";
 import CheckOut from "./components/CheckOut";
+import Login from "./components/Login";
+import SignUp from "./components/SignUp";
 const App = () => {
   return (
     <>
@@ -18,6 +20,8 @@ const App = () => {
           <Route path="/profile" element={<Profile />} />
           <Route path="/product-details" element={<ProductDetails />} />
           <Route path="/checkout" element={<CheckOut />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/sign-up" element={<SignUp />} />
         </Routes>
       </BrowserRouter>
     </>

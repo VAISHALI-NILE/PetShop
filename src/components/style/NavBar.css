@@ -4,7 +4,9 @@
   background-color: #e4d5b8;
   height: 3rem;
 }
-
+.sub-nav {
+  display: none;
+}
 .nav-bar div {
   display: flex;
   gap: 3rem;
@@ -30,7 +32,7 @@
   font-size: large;
   border: none;
 }
-input:focus {
+.nav-bar input:focus {
   border: none;
   outline: none;
 }
@@ -38,4 +40,49 @@ input:focus {
   font-size: 18px;
   color: #492710;
   cursor: pointer;
+}
+.hamburger {
+  display: none;
+}
+
+.toggle-navbar {
+  display: none;
+}
+@media (max-width: 500px) {
+  .toggle-navbar {
+    display: block;
+  }
+  .hamburger {
+    display: block;
+    background-color: #492710;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    font-size: larger;
+    font-weight: bold;
+  }
+  .sub-nav.open {
+    display: flex;
+    flex-direction: column;
+    background-color: #492710;
+    padding: 2rem;
+    width: 50vw;
+    height: 80vh;
+    position: absolute;
+  }
+  .sub-nav a {
+    text-decoration: none;
+    color: aliceblue;
+    margin: 0.5rem;
+  }
+  .nav-bar {
+    display: none;
+  }
+  .top-of-toggle {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+    background-color: #e4d5b8;
+  }
 }
